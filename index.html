@@ -1,0 +1,78 @@
+<!-- Password Generator HTML Structure -->
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- Set the title of the page -->
+  <title>Password Generator &#x1F512;</title>
+  <!-- Define the character encoding and viewport settings -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Set the title of the page (again, for older browsers) -->
+  <title>Free Password Generator</title>
+  <!-- Link to the Google Fonts stylesheet for the Roboto font -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <!-- Link to the local stylesheet -->
+  <link rel="stylesheet" href="style.css">
+  <!-- Link to the Font Awesome stylesheet for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/style.css" />
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <!-- Display the title of the page -->
+        <h1>Free Password Generator</h1>
+    </header>
+    <!-- Main Section -->
+    <main>
+        <section class="generator">
+            <!-- Display the title of the generator -->
+            <h2 class="title" aria-label="Generate a strong password">Free Password Generator</h2>
+            <!-- Form containing the generator controls -->
+            <form>
+                <!-- Password Strength Slider -->
+                <!-- Label for the password strength slider -->
+                <label for="strength" aria-label="Password strength">Password strength:</label>
+                <!-- Slider input for password strength -->
+                <input type="range" id="strength" min="10" max="30" value="20" aria-describedby="strength-indicator-display">
+                <!-- Display the password strength value and description -->
+                <div class="strength-indicator">
+                    <!-- Display the password strength value -->
+                    <span id="strength-value"></span>
+                    <!-- Display the password strength description -->
+                    <span id="strength-label" aria-label="Password strength description">Drag the slider</span>
+                </div>
+                <!-- Generate Password Button -->
+                <!-- Button to generate a new password -->
+                <button type="button" id="generate" aria-label="Generate a new password" title="Generate a new password">Generate Password</button>
+                <!-- Toggle Password Visibility Button -->
+                <!-- Button to toggle password visibility -->
+                <button type="button" id="toggle-password" aria-label="Show or hide the generated password" title="Show or hide the generated password">Show</button>
+                <!-- Copy Password Button and Checkmark Display -->
+                <div class="copy-container">
+                    <!-- Button to copy the generated password to the clipboard -->
+                    <button type="button" id="copy-password" aria-label="Copy the generated password to the clipboard" title="Copy the generated password to the clipboard">Copy Password</button>
+                    <!-- Display a checkmark when the password is copied successfully -->
+                    <span id="status-icon"></span>
+                    <!-- Display a notification when the password is copied -->
+                    <span id="copy-notification" style="display: none;">Copied!</span>
+                </div>
+                <!-- Password Display Area -->
+                <div class="result">
+                    <!-- Display the generated password -->
+                    <div id="password-display" aria-live="polite" aria-atomic="true"></div>
+                    <!-- Display the password strength indicator -->
+                    <p id="strength-indicator-display" aria-label="Password strength indicator"></p>
+                </div>
+            </form>
+        </section>
+    </main>
+    <!-- Footer Section -->
+    <footer>
+        <!-- Display the copyright information -->
+        <p>&copy; 2024 Red-Pro ENT</p>
+    </footer>
+    <!-- JavaScript Script -->
+    <!-- Link to the JavaScript script -->
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,351 @@
+/* Define CSS variables for easy customization */
+:root {
+    /* Primary color */
+    --primary-color: #2196f3;
+    /* Hover color */
+    --hover-color: #1976d2;
+    /* Background color */
+    --background-color: #f0f0f0;
+    /* Text color */
+    --text-color: #fff;
+    /* Button padding */
+    --button-padding: 10px 20px;
+    /* Container padding */
+    --container-padding: 20px;
+    /* Border radius */
+    --border-radius: 5px;
+    /* Transition speed */
+    --transition-speed: 0.3s;
+    /* Input background color */
+    --input-background: #fff;
+    /* Input border color */
+    --input-border-color: #ddd;
+}
+
+/* Global styles */
+body {
+    /* Font family */
+    font-family: 'Roboto', sans-serif;
+    /* Background color */
+    background-color: var(--background-color);
+    /* Reset margin and padding */
+    margin: 0;
+    padding: 0;
+    /* Box sizing */
+    box-sizing: border-box;
+}
+
+/* Header and footer styles */
+header, footer {
+    /* Background color */
+    background-color: var(--primary-color);
+    /* Text color */
+    color: var(--text-color);
+    /* Padding */
+    padding: var(--container-padding);
+    /* Text alignment */
+    text-align: center;
+}
+
+/* Main container styles */
+main {
+    /* Display flex */
+    display: flex;
+    /* Justify content */
+    justify-content: center;
+    /* Padding */
+    padding: var(--container-padding);
+}
+
+/* Generator container styles */
+.generator {
+    /* Background color */
+    background-color: var(--input-background);
+    /* Padding */
+    padding: var(--container-padding);
+    /* Border */
+    border: 1px solid var(--input-border-color);
+    /* Border radius */
+    border-radius: var(--border-radius);
+    /* Box shadow */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    /* Width */
+    width: 70%; /* Adjusted width */
+    /* Max width */
+    max-width: 600px;
+}
+
+/* Form styles */
+form {
+    /* Display flex */
+    display: flex;
+    /* Flex direction */
+    flex-direction: column;
+    /* Align items */
+    align-items: center;
+    /* Width */
+    width: 100%;
+}
+
+/* Title styles */
+.title {
+    /* Text alignment */
+    text-align: center;
+    /* Font size */
+    font-size: 24px;
+    /* Font weight */
+    font-weight: bold;
+    /* Margin bottom */
+    margin-bottom: 20px;
+}
+
+/* Range input styles */
+input[type="range"] {
+    /* Webkit appearance */
+    -webkit-appearance: none;
+    /* Width */
+    width: 100%;
+    /* Height */
+    height: 20px;
+    /* Border radius */
+    border-radius: 5px;
+    /* Background gradient */
+    background: linear-gradient(to right, #ff69b4, #ff9800, #ffff00, #33cc33);
+    /* Outline */
+    outline: none;
+}
+
+/* Range input thumb styles */
+input[type="range"]::-webkit-slider-thumb {
+    /* Webkit appearance */
+    -webkit-appearance: none;
+    /* Width and height */
+    width: 30px;
+    height: 30px;
+    /* Border radius */
+    border-radius: 50%;
+    /* Background color */
+    background: #fff;
+    /* Cursor */
+    cursor: pointer;
+}
+
+/* Password display styles */
+#password-display {
+    /* Padding */
+    padding: 10px;
+    /* Background color */
+    background-color: #e0e0e0;
+    /* Border radius */
+    border-radius: var(--border-radius);
+    /* Font family */
+    font-family: 'Courier New', Courier, monospace;
+    /* Text alignment */
+    text-align: center;
+    /* Width */
+    width: 300px; /* Set a fixed width for the password display window */
+    /* Overflow wrap */
+    overflow-wrap: break-word; /* Allow wrapping for long passwords */
+    /* Position */
+    position: relative; /* Add relative positioning for tooltip */
+}
+
+/* Button and tooltip styles */
+.button, #password-display::after {
+    /* Content */
+    content: attr(data-tooltip);
+    /* Position */
+    position: absolute;
+    /* Top and right */
+    top: 0;
+    right: 10px;
+    /* Font size */
+    font-size: 14px;
+    /* Background color */
+    background-color: #fff;
+    /* Border */
+    border: 1px solid #ddd;
+    /* Padding */
+    padding: 5px;
+    /* Border radius */
+    border-radius: 5px;
+    /* Display */
+    display: none;
+    /* Z-index */
+    z-index: 1;
+}
+
+/* Hover effect for tooltip */
+#password-display:hover::after {
+    /* Display */
+    display: block;
+}
+
+/* Button styles */
+button {
+    /* Background color */
+    background-color: var(--primary-color);
+    /* Text color */
+    color: var(--text-color);
+    /* Padding */
+    padding: var(--button-padding);
+    /* Margin */
+    margin: 10px 0;
+    /* Border */
+    border: none;
+    /* Border radius */
+    border-radius: var(--border-radius);
+    /* Cursor */
+    cursor: pointer;
+    /* Transition */
+    transition: background-color var(--transition-speed);
+}
+
+/* Button hover effect */
+button:hover {
+    /* Background color */
+    background-color: var(--hover-color);
+}
+
+/* Copy container styles */
+.copy-container {
+    /* Display flex */
+    display: flex;
+    /* Align items */
+    align-items: center;
+}
+
+/* Status icon styles */
+.status-icon {
+    /* Margin left */
+    margin-left: 8px; /* Adjust the margin to move checkmark a bit to the right */
+    /* Display */
+    display: inline-block; /* For inline display next to the button */
+}
+
+/* Copy notification styles */
+#copy-notification {
+    /* Margin left */
+    margin-left: 5px; /* Small space between checkmark and text */
+    /* Display */
+    display: none; /* Initially hidden */
+    /* Color */
+    color: #2ecc71; /* Green text color, adjust if needed */
+}
+
+/* Notification styles */
+.notification {
+    /* Background color */
+    background-color: #e74c3c; /* Red for errors, green for success (#2ecc71) */
+    /* Text color */
+    color: rgb(231, 10, 10);
+    /* Padding */
+    padding: 5px;
+    /* Border radius */
+    border-radius: 5px;
+    /* Position */
+    position: absolute;
+    /* Top and right */
+    top: -40px;
+    right: 0;
+    /* Display */
+    display: none;
+    /* Z-index */
+    z-index: 100;
+}
+
+/* Button tooltip styles */
+button[title]:hover::after {
+    /* Content */
+    content: attr(title);
+    /* Position */
+    position: absolute;
+    /* Background color */
+    background-color: #333;
+    /* Text color */
+    color: #fff;
+    /* Padding */
+    padding: 5px;
+    /* Border radius */
+    border-radius: 5px;
+    /* Font size */
+    font-size: 12px;
+    /* Left and transform */
+    left: 50%;
+    transform: translateX(-50%);
+    /* Bottom */
+    bottom: 150%;
+    /* White space */
+    white-space: nowrap;
+}
+
+/* Button tooltip arrow styles */
+button[title]:hover::before {
+    /* Content */
+    content: "";
+    /* Position */
+    position: absolute;
+    /* Top */
+    top: 100%;
+    /* Left and transform */
+    left: 50%;
+    transform: translateX(-50%);
+    /* Border style */
+    border-style: solid;
+    /* Border width */
+    border-width: 0 5px 5px 5px;
+    /* Border color */
+    border-color: #333 transparent transparent transparent;
+}
+
+/* Mobile and tablet styles */
+@media (max-width: 768px) {
+    /* Generator styles */
+    .generator {
+        /* Width */
+        width: 90%;
+        /* Padding */
+        padding: 20px;
+    }
+
+    /* Password display styles */
+    #password-display {
+        /* Width */
+        width: 100%;
+        /* Font size */
+        font-size: 18px;
+    }
+
+    /* Button styles */
+    button {
+        /* Font size */
+        font-size: 16px;
+        /* Padding */
+        padding: 10px 20px;
+    }
+}
+
+/* Mobile styles */
+@media (max-width: 480px) {
+    /* Generator styles */
+    .generator {
+        /* Width */
+        width: 100%;
+        /* Padding */
+        padding: 15px;
+    }
+
+    /* Password display styles */
+    #password-display {
+        /* Font size */
+        font-size: 14px;
+    }
+
+    /* Button styles */
+    button {
+        /* Font size */
+        font-size: 14px;
+        /* Padding */
+        padding: 10px 15px;
+    }
+}
