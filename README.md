@@ -29,7 +29,7 @@ To run this project locally:
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/frankienor/free_password_generator.git
+   git clone https://github.com/frankienor/password_generator.git
    
 2. Open the index.html file in your web browser.   
 
